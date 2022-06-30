@@ -7,7 +7,6 @@
 #include "emocheck.hpp"
 #include "utils/file.hpp"
 #include "utils/utils.hpp"
-
 // defines
 #define PARAM_SWITCH1 '/'
 #define PARAM_SWITCH2 '-'
@@ -352,7 +351,7 @@ int main(int argc, char *argv[]) {
         std::tie(status, scan_result) = emocheck::ScanEmotet(is_debug);
         emocheck::PrintReport(scan_result);
         emocheck::WriteReport(scan_result, is_quiet, output_path);
-        system("pause");
+        // system("pause");
         return status;
     }
 
